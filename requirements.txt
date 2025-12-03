@@ -1,0 +1,21 @@
+# Python dependencies for Smart City Traffic & Congestion System
+
+# Kafka producer
+kafka-python==2.0.2
+
+# PostgreSQL connectivity
+psycopg2-binary==2.9.9
+
+# Apache Spark (if running locally)
+# Note: PySpark is typically installed separately or via Spark distribution
+# pyspark==3.3.0
+
+# Data visualization
+matplotlib==3.7.2
+
+# Airflow dependencies (usually installed via Airflow image, but listed for reference)
+# apache-airflow==2.7.0
+
+# Additional utilities
+python-dateutil==2.8.2
+
