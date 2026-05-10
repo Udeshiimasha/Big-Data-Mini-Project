@@ -98,7 +98,7 @@ def write_aggregates_to_postgres(df, epoch_id):
 # Alerts stream: when avg_speed < 10 -> write to Kafka alert topic and Postgres alerts table
 alerts = parsed.filter(col("avg_speed") < 10).select(
     col("sensor_id"),
-    col("timestamp"),
+    col("event_time").alias("timestamp"),
     col("vehicle_count"),
     col("avg_speed")
 )
