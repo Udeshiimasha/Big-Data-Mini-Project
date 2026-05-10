@@ -5,14 +5,14 @@ Write-Host "Checking Docker Desktop status..." -ForegroundColor Cyan
 try {
     $result = docker ps 2>&1
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "`n✅ Docker Desktop is RUNNING!" -ForegroundColor Green
+        Write-Host "`n Docker Desktop is RUNNING!" -ForegroundColor Green
         Write-Host "You can now run: docker compose up -d" -ForegroundColor Yellow
     } else {
-        Write-Host "`n❌ Docker Desktop is NOT running yet" -ForegroundColor Red
+        Write-Host "`n Docker Desktop is NOT running yet" -ForegroundColor Red
         Write-Host "Please wait a bit longer and try again, or start Docker Desktop manually" -ForegroundColor Yellow
     }
 } catch {
-    Write-Host "`n❌ Docker Desktop is NOT running" -ForegroundColor Red
+    Write-Host "`n Docker Desktop is NOT running" -ForegroundColor Red
     Write-Host "Error: $_" -ForegroundColor Red
 }
 
